@@ -61,6 +61,7 @@ namespace ruWow
                     configWTFW.Write(text);
                     configWTFW.Close();
                     label1.Text = "EU NOW";
+                    label1.ForeColor = System.Drawing.Color.Green;
                     return;
                 }
                 if (text.Contains("SET textLocale \"enUS\""))
@@ -69,6 +70,7 @@ namespace ruWow
                     StreamWriter configWTFW = new StreamWriter(@"WTF\config.WTF");
                     configWTFW.Write(text);
                     label1.Text = "RU NOW";
+                    label1.ForeColor = System.Drawing.Color.Green;
                     configWTFW.Close();
                     return;
                 }
@@ -97,13 +99,13 @@ namespace ruWow
                 Process.Start("Wow-64.exe");
                 Application.Exit();
             }
-            catch(System.ComponentModel.Win32Exception)
+            catch (System.ComponentModel.Win32Exception)
             {
                 label1.Text = "Не там";
                 label1.ForeColor = System.Drawing.Color.Red;
             }
-            
-            
+
+
 
         }
 
@@ -125,8 +127,8 @@ namespace ruWow
             {
                 label1.Text = "Не там";
                 label1.ForeColor = System.Drawing.Color.Red;
-                
-            } 
+
+            }
         }
     }
 }

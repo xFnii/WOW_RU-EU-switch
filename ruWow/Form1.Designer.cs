@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.swap = new System.Windows.Forms.Button();
             this.euL = new System.Windows.Forms.Button();
@@ -40,7 +39,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(20, 9);
+            this.label1.Location = new System.Drawing.Point(61, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 26);
             this.label1.TabIndex = 0;
@@ -48,7 +47,7 @@
             // 
             // swap
             // 
-            this.swap.Location = new System.Drawing.Point(27, 48);
+            this.swap.Location = new System.Drawing.Point(75, 55);
             this.swap.Name = "swap";
             this.swap.Size = new System.Drawing.Size(75, 23);
             this.swap.TabIndex = 1;
@@ -58,9 +57,9 @@
             // 
             // euL
             // 
-            this.euL.Location = new System.Drawing.Point(7, 84);
+            this.euL.Location = new System.Drawing.Point(12, 84);
             this.euL.Name = "euL";
-            this.euL.Size = new System.Drawing.Size(54, 23);
+            this.euL.Size = new System.Drawing.Size(100, 23);
             this.euL.TabIndex = 2;
             this.euL.Text = "EU";
             this.euL.UseVisualStyleBackColor = true;
@@ -68,9 +67,9 @@
             // 
             // ruL
             // 
-            this.ruL.Location = new System.Drawing.Point(70, 84);
+            this.ruL.Location = new System.Drawing.Point(116, 84);
             this.ruL.Name = "ruL";
-            this.ruL.Size = new System.Drawing.Size(54, 23);
+            this.ruL.Size = new System.Drawing.Size(100, 23);
             this.ruL.TabIndex = 3;
             this.ruL.Tag = "RU";
             this.ruL.Text = "RU";
@@ -81,13 +80,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(131, 119);
+            this.ClientSize = new System.Drawing.Size(228, 119);
             this.Controls.Add(this.ruL);
             this.Controls.Add(this.euL);
             this.Controls.Add(this.swap);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Смена языка вовна";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
