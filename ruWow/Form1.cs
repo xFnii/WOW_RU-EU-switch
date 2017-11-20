@@ -61,6 +61,7 @@ namespace ruWow
                     configWTFW.Write(text);
                     configWTFW.Close();
                     label1.Text = "EU NOW";
+                    return;
                 }
                 if (text.Contains("SET textLocale \"enUS\""))
                 {
@@ -69,6 +70,7 @@ namespace ruWow
                     configWTFW.Write(text);
                     label1.Text = "RU NOW";
                     configWTFW.Close();
+                    return;
                 }
             }
             catch (System.IO.DirectoryNotFoundException)
@@ -90,8 +92,18 @@ namespace ruWow
             StreamWriter configWTFW = new StreamWriter(@"WTF\config.WTF");
             configWTFW.Write(text);
             configWTFW.Close();
-            Process.Start("Wow-64.exe");
-            Application.Exit();
+            try
+            {
+                Process.Start("Wow-64.exe");
+                Application.Exit();
+            }
+            catch(System.ComponentModel.Win32Exception)
+            {
+                label1.Text = "Не там";
+                label1.ForeColor = System.Drawing.Color.Red;
+            }
+            
+            
 
         }
 
@@ -104,8 +116,17 @@ namespace ruWow
             StreamWriter configWTFW = new StreamWriter(@"WTF\config.WTF");
             configWTFW.Write(text);
             configWTFW.Close();
-            Process.Start("Wow-64.exe");
-            Application.Exit();
+            try
+            {
+                Process.Start("Wow-64.exe");
+                Application.Exit();
+            }
+            catch (System.ComponentModel.Win32Exception)
+            {
+                label1.Text = "Не там";
+                label1.ForeColor = System.Drawing.Color.Red;
+                
+            } 
         }
     }
 }
